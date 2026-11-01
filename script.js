@@ -112,3 +112,79 @@ for (let i = 1; i < friendFavorites.length; i++) {
 console.log(
   `The longest food name in the list is ${longestFood} with ${longestFood.length} characters.`
 );
+
+console.log("script.js connected!");
+
+// storing the answers the user picks
+let answers = [];
+
+// grab all question sections
+const questionBlocks = document.querySelectorAll(".question-block");
+
+// go through each question block
+questionBlocks.forEach((question, index) => {
+
+    // get the answer buttons inside this question
+    const buttons = question.querySelectorAll(".answer-btn");
+
+    buttons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            // remove selected from the other buttons first
+            buttons.forEach((btn) => {
+                btn.classList.remove("selected");
+            });
+
+            // highlight the button that got clicked
+            button.classList.add("selected");
+
+            // save the score for this question
+            answers[index] = Number(button.dataset.score);
+
+            console.log(answers);
+        });
+    });
+});
+
+// calculate the result when the user clicks show results
+function displayResult() {
+
+    let total = 0;
+
+    // add up all the scores
+    answers.forEach((score) => {
+        total += score;
+    });
+
+    const resultContainer =
+        document.getElementById("result-container");
+
+    // lion result
+    if (total >= 7) {
+
+        resultContainer.innerHTML = `
+            <h2>You Are a Lion</h2>
+            <p>
+                You are confident, adventurous,
+                and usually take charge.
+            </p>
+        `;
+
+    } else {
+
+        // dolphin result
+        resultContainer.innerHTML = `
+            <h2>You Are a Dolphin</h2>
+            <p>
+                You are friendly, social,
+                and enjoy being around people.
+            </p>
+        `;
+    }
+}
+
+// run the result function when button is clicked
+document
+    .getElementById("show-results")
+    .addEventListener("click", displayResult);

@@ -52,7 +52,7 @@ html {
     max-width: 1000px;
     margin: 4rem auto;
     padding: 2rem;
-    background: white;
+    background: rgb(70, 60, 60);
   }
   
   .box, .wrapper {
@@ -65,7 +65,7 @@ html {
   
   
   a.button, button, input[type="button"] {
-    color: white;
+    color: rgb(8, 7, 7);
     background: var(--pink);
     padding: 1rem;
     border: 0;
@@ -90,7 +90,7 @@ html {
   }
   
   .success {
-    border: 1px solid red;
+    border: 1px solid rgb(12, 11, 11);
   }
   
   h1,
@@ -99,7 +99,7 @@ html {
   h4,
   h5,
   h6 {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-top: 2rem;
     margin-left: 2rem;
     line-height: 1;
@@ -115,9 +115,35 @@ html {
     text-shadow: none;
   }
   li {
-    color: white;
+    color: rgb(171, 171, 171);
   }
 
   a {
     color: inherit;
   }
+
+  body {
+    background-color: #858181;
+}
+
+.question-block {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.answer-btn {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.selected {
+    border: 3px solid rgb(74, 63, 63) !important;
+}
+
+#result-container {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}

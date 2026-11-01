@@ -8,16 +8,83 @@
     
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="./style.css">
-</head>  
-<body>
-    <h1>Open the console!</h1>
-    <h4>Directions for opening your console</h4>
-    <ul>
-      <li><a href="https://developer.chrome.com/docs/devtools/open">Google Chrome</a></li>
-      <li><a href = "https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html">Firefox</a></li>
-      <li><a href = "https://support.apple.com/en-il/guide/safari/sfri20948/mac">Safari</a></li>
-      <li><a href = "https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/css/inspect">Edge</a></li>
-    </ul>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <!-- import Bootstrap CSS -->
+<div class="container mt-5">
+
+    <div class="question-block mb-4">
+    <h4>1. What sounds like the best weekend?</h4>
+
+    <button class="btn btn-primary answer-btn" data-score="3">
+        Hiking a mountain
+    </button>
+
+    <button class="btn btn-secondary answer-btn" data-score="2">
+        Exploring with friends
+    </button>
+
+    <button class="btn btn-info answer-btn" data-score="1">
+        Relaxing at the beach
+    </button>
+</div>
+
+    <!-- Question 2 -->
+    <div class="question-block mb-4">
+    <h4>2. What's your biggest strength?</h4>
+
+    <button class="btn btn-primary answer-btn" data-score="3">
+        Leadership
+    </button>
+
+    <button class="btn btn-secondary answer-btn" data-score="2">
+        Loyalty
+    </button>
+
+    <button class="btn btn-info answer-btn" data-score="1">
+        Kindness
+    </button>
+</div>
+
+    <!-- Question 3 -->
+    <div class="question-block mb-4">
+    <h4>3. Which place would you rather visit?</h4>
+
+    <button class="btn btn-primary answer-btn" data-score="3">
+        Safari
+    </button>
+
+    <button class="btn btn-secondary answer-btn" data-score="2">
+        Forest
+    </button>
+
+    <button class="btn btn-info answer-btn" data-score="1">
+        Beach
+    </button>
+</div>
+
+    <!-- Question 4 -->
+    <div class="question-block mb-4">
+    <h4>4. How do your friends describe you?</h4>
+
+    <button class="btn btn-primary answer-btn" data-score="3">
+        Fearless
+    </button>
+
+    <button class="btn btn-secondary answer-btn" data-score="2">
+        Reliable
+    </button>
+
+    <button class="btn btn-info answer-btn" data-score="1">
+        Friendly
+    </button>
+</div>
+
+    <button id="show-results" class="btn btn-success">
+        Show Results
+    </button>
+
+    <div id="result-container" class="mt-4"></div>
+
+</div>
+
+<script src="script.js"></script>
